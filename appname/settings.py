@@ -1,4 +1,5 @@
 import os
+import sys
 from pathlib import Path
 
 import environ
@@ -12,6 +13,8 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 PROJECT_NAME = env.str("PROJECT_NAME", default="Sidewinder")
 
 DEBUG = env.bool("DJANGO_DEBUG")
+
+TEST_RUN = "pytest" in sys.modules
 
 SECRET_KEY = env.str("DJANGO_SECRET_KEY")
 
@@ -63,7 +66,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
-if DEBUG:
+if DEBUG and not TEST_RUN:
     MIDDLEWARE += [
         "silk.middleware.SilkyMiddleware",
         "django_browser_reload.middleware.BrowserReloadMiddleware",
