@@ -4,8 +4,8 @@ from rest_framework.reverse import reverse
 
 
 @pytest.mark.django_db
-def test_openapi_spec(client):
-    response = client.get(reverse("schema") + "?format=json")
+def test_openapi_spec(api_client):
+    response = api_client.get(reverse("schema") + "?format=json")
 
     # If no exception is raised the spec is valid
     openapi_v30_spec_validator.validate(response.json())

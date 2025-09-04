@@ -9,5 +9,5 @@ os.environ.setdefault("DJANGO_ALLOW_ASYNC_UNSAFE", "true")
 
 
 @pytest.fixture()
-def client():
+def api_client():
     return APIClient()

@@ -6,7 +6,7 @@ from tests.core.fixtures.defaults import DEFAULT_PASSWORD
 
 
 @pytest.mark.django_db
-def test_auth_token_view(client, user_factory):
+def test_auth_token_view(api_client, user_factory):
     """
     User can obtain a valid token by providing correct
     email and password.
@@ -14,7 +14,7 @@ def test_auth_token_view(client, user_factory):
 
     user = user_factory()
 
-    response = client.post(
+    response = api_client.post(
         reverse("token_auth"), {"email": user.email, "password": DEFAULT_PASSWORD}
     )
 
@@ -23,14 +23,14 @@ def test_auth_token_view(client, user_factory):
 
 
 @pytest.mark.django_db
-def test_auth_token_view_invalid_password(client, user_factory):
+def test_auth_token_view_invalid_password(api_client, user_factory):
     """
     Token is not returned when bad password is provided.
     """
 
     user = user_factory()
 
-    response = client.post(
+    response = api_client.post(
         reverse("token_auth"), {"email": user.email, "password": "invalid password"}
     )
 
@@ -39,27 +39,27 @@ def test_auth_token_view_invalid_password(client, user_factory):
 
 
 @pytest.mark.django_db
-def test_protected_view_not_accessible(client):
+def test_protected_view_not_accessible(api_client):
     """
     View with [IsAuthenticated] can't be accessed without a valid
     token.
     """
 
-    response = client.get(reverse("protected"))
+    response = api_client.get(reverse("protected"))
 
     assert response.status_code == status.HTTP_401_UNAUTHORIZED
 
 
 @pytest.mark.django_db
-def test_protected_view_access_with_token(client, token_factory):
+def test_protected_view_access_with_token(api_client, token_factory):
     """
     View with [IsAuthenticated] can be accessed with a valid
     token.
     """
 
     token = token_factory()
-    client.credentials(HTTP_AUTHORIZATION="Token " + token.key)
+    api_client.credentials(HTTP_AUTHORIZATION="Token " + token.key)
 
-    response = client.get(reverse("protected"))
+    response = api_client.get(reverse("protected"))
 
     assert response.status_code == status.HTTP_200_OK
