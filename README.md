@@ -1,3 +1,35 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=stribny&project=sidewinder&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 # Sidewinder
 
 <br><br>
